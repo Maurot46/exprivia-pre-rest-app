@@ -41,6 +41,7 @@ public class MainController {
                 ()-> new ResponseStatusException(HttpStatus.NOT_FOUND, "NOT FOUND"));
     }
 
+
     @GetMapping("/user/name/{name}")
     public @ResponseBody List<User> findByName(@PathVariable(name = "name") String name){
         return userRepository.findUserByNameIgnoreCase(name);
